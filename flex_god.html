@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+
+		html,body{
+			height: 100%;
+			color: #fff;
+		}
+
+		body{
+			min-width: 100%;
+			display: flex;
+			flex-flow:column wrap;
+			justify-content:start;
+		}
+
+		header,section,nav,aside,footer{
+			display: block;
+		}
+
+		header{
+			background-color: hsla(200,10%,70%,0.5);
+			min-height: 100px;
+			padding: 10px 20px;
+			width: 100%;
+			order:1;
+		}
+
+		nav{
+			background-color: hsla(300,60%,20%,0.9);
+			padding: 1%;
+			width: 220px;
+			order:1;
+		}
+
+		aside{
+			background-color: hsla(20,80%,80%,0.9);
+			padding: 1%;
+			width: 220px;
+			order:3;
+		}
+
+		section{
+			display: flex;
+			order:2;
+			flex:1;
+			margin: 20px 0;
+		}
+
+		footer{
+			background-color: hsla(250,50%,80%,0.9);
+			min-height: 60px;
+			padding: 1%;
+			min-width: 100%;
+			order:3;
+		}
+
+		article{
+			background-color: hsla(120,50%,50%,0.9);
+			padding: 1%;
+			margin: 0 2%;
+			flex:1;
+			order:2;
+		}
+
+		@media (max-width: 640px){
+			section{
+				flex-direction:column;
+				flex:1;
+				margin: 0;
+			}
+
+			nav,aside,article{
+				flex:auto;
+				margin: 0;
+				width: 100%;
+			}
+		}
+	</style>
+	<title>flex god</title>
+</head>
+<body>
+	<header></header>
+	<section>
+		<article>article</article>
+		<nav>nav</nav>
+		<aside>aside</aside>
+	</section>
+	<footer>footer</footer>
+</body>
+</html>
