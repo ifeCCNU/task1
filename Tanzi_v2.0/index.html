@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>跳转中...</title>
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<script>
+    var system ={};
+    var p = navigator.platform;
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    if(system.win||system.mac||system.xll){//如果是电脑跳转到index_win
+        window.location.href="index_win.html";
+    }else{  //如果是手机,跳转到下面这个
+        window.location.href="index_mobile.html";
+    }
+
+</script>
+</body>
+</html>

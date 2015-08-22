@@ -1,0 +1,2 @@
+1.网站图标在 firefox 没有显示
+2.pic页面底部的图标在ie 和 firefox 不兼容
