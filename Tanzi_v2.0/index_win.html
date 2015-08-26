@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tanzi的小窝</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="description" content="Animated Content Tabs with CSS3" />
+    <meta name="keywords" content="tabs, css3, transition, checked, pseudo-class, label, css-only, sibling combinator" />
+    <link rel="stylesheet" type="text/css" href="css/ContentTabs.css" />
+   <link rel="shortcut icon" href="favicon.ico" />
+    <script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+
+    <style>
+        *{
+            margin: 0px;
+        }
+    /* css3中新增的控制背景图片的方法
+    body{
+         background: url("images/vague1.png") no-repeat ;
+         backround-size:cover;
+         -webkit-background-size:cover;
+     }*/
+        @keyframes fade-in {
+            0% {opacity: 0;}/*初始状态 透明度为0*/
+            40% {opacity: 0;}/*过渡状态 透明度为0*/
+            100% {opacity: 1;}/*结束状态 透明度为1*/
+        }
+        @-webkit-keyframes fade-in {/*针对webkit内核*/
+            0% {opacity: 0;}
+            40% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        #bg{
+            animation: fade-in;/*动画名称*/
+            animation-duration: 1.3s;/*动画持续时间*/
+            -webkit-animation:fade-in 1.3s;/*针对webkit内核*/
+        }
+        #bg{
+            width: 100%;
+            height: auto;
+            position:absolute;
+            left:0px;
+            top:0px;
+            z-index:-1;
+      }
+       section{
+            width: auto;
+            height: 100%;
+        }
+        h1{
+            margin-top: 110px;
+            font-size: 4em;
+            text-align: center;
+        }
+        h5{
+            letter-spacing: 34px;
+            font-size:1em;
+            font-weight: lighter;
+            margin-left: 438px;
+        }
+        .text{
+
+            color: #ffffff;
+            font-family:Microsoft YaHei, sans-serif;
+        }
+        .photo{
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -ms-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+        }
+        .photo:hover{
+            transform: rotate(0deg) scale(1.02);
+            -webkit-transform: rotate(3deg) scale(1.02);
+        }
+        #copy{
+            text-align: center;margin-bottom: 10px;
+            color: #ffffff;
+            font-family:Microsoft YaHei, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
+<img id="bg" src="images/vague1.png">
+<h1 class="text">Tanzi's Home</h1>
+<h5 class="text">欢迎来到坛子的小窝</h5>
+<section class="tabs">
+    <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+    <label for="tab-1" class="tab-label-1">About</label>
+
+    <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+    <label for="tab-2" class="tab-label-2">Resume</label>
+
+    <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+    <label for="tab-3" class="tab-label-3">Photos</label>
+
+    <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+    <label for="tab-4" class="tab-label-4">Contact</label>
+
+    <div class="clear-shadow"></div>
+
+    <div class="content">
+        <div class="content-1">
+            <h2>About me</h2>
+            <p>简单 活泼 好学 上进 当然 懒和这一切并不冲突</p>
+            <h3>How we work</h3>
+            <br/>
+            <p>Do not delay anything that adds laughter and joy to your life;</p>
+            <p>不要延迟任何可以给你的生活带来欢笑与快乐的事情；</p>
+            <p>Every day,every hour,and every minute is special;</p>
+            <p> 每一天、每一小时、每一分钟都是那么特别；</p>
+            <p> And you don't know if it will be your last.</p>
+            <p> 你无从知道这是否最后时刻。</p>
+        </div>
+        <div class="content-2">
+            <table>
+                <tr>
+                    <td><p>戳这里 <a href="resume.html" >╰(￣▽￣)╮</a> 一点都不萌的Resume</p></td>
+                    <td><img src="http://img4.duitang.com/uploads/blog/201311/15/20131115142301_jRays.thumb.600_0.jpeg"width="80%"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="content-3">
+            <h2>Photos</h2>
+             <table>
+                 <tr>
+                     <td><img class="photo" src="http://ww4.sinaimg.cn/mw690/b3fb6e83jw1eu5hqbif9pj20ai0aiaax.jpg" height="80%" ></td>
+                     <td><img class="photo" src="http://ww4.sinaimg.cn/mw690/b3fb6e83jw1euag4jtvhnj205k029wea.jpg"></td>
+                 </tr>
+             </table>
+        </div>
+        <div class="content-4">
+            <h2>Last</h2>
+        <p> That's why I propose,that as of today;</p>
+            <p> 这就是我为什么要说，让我们从今天开始；</p>
+            <p> Search for knowledge,read more ,sit on your porch and admire the view without paying attention to your needs;</p>
+            <p> 寻找更多的知识，多读一些书，坐在你家的前廊里，以赞美的眼光去享受眼前的风景，不要带上任何功利的想法；</p>
+            <p> Spend more time with your family and friends,eat your favorite foods,visit the places you love;</p>
+            <p> 花多点时间和朋友与家人在一起，吃你爱吃的食物，去你想去的地方！</p>
+
+            <h3>Get in touch</h3>
+            <p>  Weibo:<a href="http://weibo.com/u/3019599491">@Adorable坛子</a> </p>
+            <p>  Github:<a href="https://github.com/Adorabletanzi">Adorabletanzi</a> </p>
+            <p>  Mail：<a href="http://exmail.qq.com/">lxtz@mails.ccnu.edu.cn</a></p>
+            <p>  期待与您的联系！</p>
+    </div>
+</section>
+
+<p id="copy">&copy;2015 www.tanzihome.com version2.0</p>
+</body>
+</html>
